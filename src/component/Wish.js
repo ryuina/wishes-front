@@ -1,6 +1,6 @@
 import React from "react";
 const Wish = ({data}) => {
-  const tagList = data.tags.map(tag => <li>{tag}</li>);
+  const tagList = data.tags.map((tag, idx) => <li key={idx}>{tag}</li>);
   return (
     <li className="wish">
       <div>
