@@ -1,8 +1,8 @@
-import { useCallback } from "react";
+import React, { useCallback } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { setUserName } from "../actions/header";
 
-const UserIcon = ({ setUserName }) => {
+const UserIcon = () => {
   const userName = useSelector(state => state.header.userName);
   const dispatch = useDispatch();
   const onClick = useCallback(() => dispatch(setUserName("RyuIna")), [dispatch]);
@@ -16,14 +16,4 @@ const UserIcon = ({ setUserName }) => {
   )
 };
 
-const mapStateToProps = state => ({
-  userName: state.header.userName
-});
-
-const mapDispatchToProps = dispatch => ({
-  setUserName: (userName) => {
-    dispatch(setUserName(userName));
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(UserIcon);
+export default React.memo(UserIcon);
