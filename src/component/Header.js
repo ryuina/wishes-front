@@ -1,9 +1,10 @@
 import React from 'react';
+import UserIcon from '../component/UserIcon';
 
-const Header = ({ userName }) => {
+const Header = () => {
   return (
     <div className="header">
-      <div className="user">{userName}</div>
+      <UserIcon />
     </div>
   )
 }

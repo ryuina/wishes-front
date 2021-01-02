@@ -13,6 +13,10 @@ ul { list-style: none; padding: 0; margin: 0; }
   height: 80px;
 }
 
+.user {
+  float: right;
+  margin-right: 2.5vw;
+}
 .wishes {
   margin: 0 2.5vw;
   display: grid;
