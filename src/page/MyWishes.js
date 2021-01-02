@@ -30,7 +30,7 @@ const wishDataList = [{
 }];
 
 const MyWishes = () => {
-  const wishList = wishDataList.map(wishData => <Wish data={wishData}/>);
+  const wishList = wishDataList.map((wishData, idx) => <Wish key={idx} data={wishData}/>);
   return (
     <ul className="wishes">
       {wishList}
