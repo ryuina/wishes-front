@@ -1,5 +1,5 @@
 import React from 'react';
-import UserIcon from '../component/UserIcon';
+import UserIcon from './UserIcon';
 
 const Header = () => {
   return (

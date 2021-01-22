@@ -1,9 +1,10 @@
 import React, { useCallback } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUserName } from "../actions/header";
+import { RootState } from '../reducers/index';
 
 const UserIcon = () => {
-  const userName = useSelector(state => state.header.userName);
+  const userName = useSelector(({ header }: RootState) => header.userName);
   const dispatch = useDispatch();
   const onClick = useCallback(() => dispatch(setUserName("RyuIna")), [dispatch]);
   return (

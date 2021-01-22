@@ -1,5 +1,11 @@
 import React from "react";
-const Wish = ({data}) => {
+import { WishData } from '../page/MyWishes';
+
+interface Props {
+  data: WishData;
+}
+
+const Wish = ({data}: Props) => {
   const tagList = data.tags.map((tag, idx) => <li key={idx}>{tag}</li>);
   return (
     <li className="wish">

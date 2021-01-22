@@ -1,6 +1,15 @@
 import React from 'react';
 import Wish from '../component/Wish';
-const wishDataList = [{
+
+export interface WishData {
+  title: string;
+  img: string;
+  tags: string[];
+}
+
+type WishList = WishData[]
+
+const wishDataList: WishList = [{
   title: "아크네 파랑 니트",
   img: "https://www.acnestudios.com/on/demandware.static/-/Sites-acne-product-catalog/default/dwfd6737f4/images/A6/A60195-/750x/A60195-AAJ_A.jpg",
   tags: ["니트류", "아크네", "새해 설빔"]
